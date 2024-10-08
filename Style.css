@@ -1,0 +1,85 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+html, body{
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../../Downloads/noam-cohen-AC-Xd-y2Clg-unsplash.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.content {
+    height: 100px;
+    width: 360px;
+    background: linear-gradient(135deg, #ff00e0, #ffeb3b, #ff0000);
+    border-radius: 10px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: animate 1.5s linear infinite;
+}
+
+.content .card{
+    height: 85px;
+    width: 350px;
+    background-color: #1b1b1b;
+    border-radius: 6px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    box-shadow: 0 0 20px rgba(255, 0, 224, 0.5), 
+                0 0 30px rgba(255, 235, 59, 0.5), 
+                0 0 40px rgba(255, 0, 0, 0.5);
+    animation: glow 1.5s infinite alternate;
+}
+
+.content .card span{
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.card #time {
+    color: #fff;
+    font-size: 50px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    background-clip: text;
+    background: linear-gradient(135deg, #ff00e0, #ffeb3b, #ff0000);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: animate 1.5s linear infinite;
+}
+
+
+@keyframes animate {
+    100%{
+        filter: hue-rotate(260deg);
+    }
+} 
+
+.content span {
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
+}
+
+.content span :first-child{
+    filter:blur(7px);
+}
+
+.content span :last-child{
+    filter: blur(20px);
+}
